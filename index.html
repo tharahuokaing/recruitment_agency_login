@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Huokaing Thara Recruitment Agency</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kantumruy+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation Bar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <div class="logo-icon">
+                <img src="recruitment_logo.jpg" alt="Huokaing Thara Recruitment" onerror="this.src='https://via.placeholder.com/44?text=HT'">
+            </div>
+            <div class="logo-text">
+                <h1 data-km="ភ្នាក់ងារជ្រើសរើសពលករ ហួកាំងថារ៉ា" data-en="Huokaing Thara Recruitment Agency">ភ្នាក់ងារជ្រើសរើសពលករ ហួកាំងថារ៉ា</h1>
+                <span data-km="ប្រព័ន្ធចូលប្រើប្រាស់គណនី" data-en="Portal Authentication System">ប្រព័ន្ធចូលប្រើប្រាស់គណនី</span>
+            </div>
+        </div>
+
+        <div class="header-actions">
+            <!-- Language Switcher -->
+            <button id="lang-toggle" class="btn btn-lang">
+                🌐 <span id="lang-text">English</span>
+            </button>
+            
+            <!-- Login Trigger Button -->
+            <button id="open-login-btn" class="btn btn-gold">
+                🔑 <span data-km="ចូលប្រើប្រាស់" data-en="Login">ចូលប្រើប្រាស់</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Welcome Screen -->
+    <main class="hero-container">
+        <h2 data-km="ស្វាគមន៍មកកាន់ ភ្នាក់ងារជ្រើសរើសពលករ ហួកាំងថារ៉ា" data-en="Welcome to Huokaing Thara Recruitment Agency">ស្វាគមន៍មកកាន់ ភ្នាក់ងារជ្រើសរើសពលករ ហួកាំងថារ៉ា</h2>
+        <p data-km="សូមចូលប្រើប្រាស់គណនីរបស់អ្នកដើម្បីគ្រប់គ្រងប្រវត្តិរូប (CV) ឬតាមដានការដាក់ពាក្យធ្វើការ" data-en="Please log in to manage your profile, submit CVs, or track job applications.">សូមចូលប្រើប្រាស់គណនីរបស់អ្នកដើម្បីគ្រប់គ្រងប្រវត្តិរូប (CV) ឬតាមដានការដាក់ពាក្យធ្វើការ</p>
+        <button id="hero-login-btn" class="btn btn-gold btn-lg">
+            🔑 <span data-km="ចូលប្រើប្រាស់គណនីឥឡូវនេះ" data-en="Log In to Account Now">ចូលប្រើប្រាស់គណនីឥឡូវនេះ</span>
+        </button>
+    </main>
+
+    <!-- Interactive Login Modal Overlay -->
+    <div id="login-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button id="close-login-btn" class="modal-close">&times;</button>
+            
+            <div class="modal-header">
+                <h3 data-km="ចូលប្រើប្រាស់គណនី" data-en="Sign In to Your Account">ចូលប្រើប្រាស់គណនី</h3>
+                <p data-km="សូមបញ្ចូលលេខទូរស័ព្ទ/អ៊ីមែល និងពាក្យសម្ងាត់របស់អ្នក" data-en="Enter your phone/email and password to proceed">សូមបញ្ចូលលេខទូរស័ព្ទ/អ៊ីមែល និងពាក្យសម្ងាត់របស់អ្នក</p>
+            </div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="form-group">
+                    <label data-km="លេខទូរស័ព្ទ ឬ អ៊ីមែល" data-en="Phone Number or Email">លេខទូរស័ព្ទ ឬ អ៊ីមែល</label>
+                    <input type="text" id="login-identity" required placeholder="012 345 678 / user@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label data-km="ពាក្យសម្ងាត់" data-en="Password">ពាក្យសម្ងាត់</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="login-password" required placeholder="••••••••">
+                        <button type="button" id="toggle-password-btn" class="toggle-pwd-btn">👁️</button>
+                    </div>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <span data-km="ចងចាំគណនី" data-en="Remember Me">ចងចាំគណនី</span>
+                    </label>
+                    <a href="#" class="forgot-pass" data-km="ភ្លេចពាក្យសម្ងាត់?" data-en="Forgot Password?">ភ្លេចពាក្យសម្ងាត់?</a>
+                </div>
+
+                <button type="submit" class="btn btn-gold btn-full" id="submit-login-btn">
+                    <span data-km="ចូលប្រើប្រាស់" data-en="Sign In">ចូលប្រើប្រាស់</span>
+                </button>
+            </form>
+
+            <div class="modal-footer">
+                <span data-km="មិនទាន់មានគណនីមែនទេ?" data-en="Don't have an account?">មិនទាន់មានគណនីមែនទេ?</span>
+                <a href="#" class="register-link" data-km="ចុះឈ្មោះទីនេះ" data-en="Register Here">ចុះឈ្មោះទីនេះ</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
